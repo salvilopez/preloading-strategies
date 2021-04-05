@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { PrecargaOpcional } from './strategies/precarga-opcional.strategy';
+import { NetworkAware } from './strategies/network-aware.strategy';
+import { OnDemand } from './strategies/on-demand.strategy';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { PrecargaOpcional } from './strategies/precarga-opcional.strategy';
     MatListModule
   ],
   providers: [
-    PrecargaOpcional
+    PrecargaOpcional,
+    NetworkAware,
+    OnDemand
   ],
   bootstrap: [AppComponent]
 })
