@@ -28,3 +28,36 @@ ng generate component modules/home/homePage
  ng generate @angular/material:navigation "NOMBRECOMPONENTE"
 
  ng generate @angular/material:navigation components/nav
+
+6 cargamos la rutas precargadas por defecto perezosas en app-routing-module
+
+Route[{
+  path:'home',
+  loadChildren:()=>import('./modules/home/home.module').then(m =>m.HomeModule)
+}]
+
+Y en el routing del hijo de la ruta que llamamos añadimos una ruta normal
+
+Route[
+  {path:'',
+  component:HomePageComponent
+  }
+]
+7añadimos el homepage al navcomponent.xml
+
+      </button>
+            <span>Preloading-strategies</span>
+        </mat-toolbar>
+
+        <div class="content" role="main">
+
+            <router-outlet></router-outlet>
+
+        </div>
+
+    </mat-sidenav-content>
+
+
+
+
+
