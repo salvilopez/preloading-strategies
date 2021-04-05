@@ -1,4 +1,30 @@
-creamos el proyecto
+1-creamos el proyecto
 
 ng new preloading-strategies
 
+2-generammos la rutas
+
+ng generate module modules/home --routing
+
+ng generate module modules/market --routing
+
+ng generate module modules/users --routing
+
+3- generamos los modulos componentes
+
+ng generate component modules/home/homePage
+ ng generate component modules/users/userPage
+
+ ng generate component modules/market/marketPage
+
+ 4-generamos el angular material  https://material.angular.io/guide/schematics
+
+ ng add @angular/material
+
+ ng add @angular/cdk
+
+ 5-añadimos un componente navegacion de schematic(Plantilla) angular material
+
+ ng generate @angular/material:navigation "NOMBRECOMPONENTE"
+
+ ng generate @angular/material:navigation components/nav
