@@ -1,0 +1,4 @@
+creamos el proyecto
+
+ng new preloading-strategies
+
